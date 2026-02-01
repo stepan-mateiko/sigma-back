@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -5,7 +7,6 @@ const path = require("path");
 const { connectToDatabase } = require("./db/db");
 const productApi = require("./api/productApi");
 const orderApi = require("./api/orderApi");
-require("dotenv").config();
 
 const port = process.env.PORT || 5050;
 app.use(cors());
