@@ -1,5 +1,5 @@
 {
-  "name": "Sigma Store backend",
+  "name": "sigma-store-backend",
   "version": "1.0.0",
   "description": "Backend service for a simple e-commerce application",
   "main": "index.js",
