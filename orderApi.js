@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { addOrderToDatabase, getOrders } = require("./db");
+const { addOrderToDatabase, getOrders, deleteOrder } = require("./db");
 
 router.post("/api/orders", async (req, res) => {
   try {
@@ -18,6 +18,16 @@ router.get("/api/orders", async (req, res) => {
     res.json(orders);
   } catch (error) {
     res.status(500).json({ error: "Error fetching orders" });
+  }
+});
+
+router.delete("/api/orders/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    await deleteOrder(id);
+    res.status(200).json({ message: "Order deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Error deleting order" });
   }
 });
 

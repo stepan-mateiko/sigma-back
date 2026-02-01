@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectId } = require("mongodb");
 
 const uri =
   "mongodb+srv://uchihayankee:Walinor99@cluster0.aim8grx.mongodb.net/?retryWrites=true&w=majority";
@@ -53,10 +53,18 @@ async function getOrders() {
     throw error;
   }
 }
+async function deleteOrder(orderId) {
+  const database = client.db("Sigma");
+  const orders = database.collection("Orders");
+
+  await orders.deleteOne({ _id: new ObjectId(orderId) });
+}
+
 module.exports = {
   client,
   connectToDatabase,
   getProductList,
   addOrderToDatabase,
   getOrders,
+  deleteOrder,
 };
