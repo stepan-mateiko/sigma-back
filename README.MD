@@ -114,10 +114,14 @@ backend/
 
 ## Author
 
-Stepan Mateiko
-Junior Frontend Developer @ EPAM
-(Backend project for learning & portfolio purposes)
+**Stepan Mateiko**
+Junior Frontend Developer (React)
 
-```
+- Frontend: ✅ Developed by me
+- Backend: ✅ Developed by me
 
-```
+---
+
+## 📄 License
+
+This project was created for educational and portfolio purposes.
