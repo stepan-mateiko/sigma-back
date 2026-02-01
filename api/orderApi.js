@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { addOrderToDatabase, getOrders, deleteOrder } = require("./db");
+const { addOrderToDatabase, getOrders, deleteOrder } = require("../db/db");
 
 router.post("/api/orders", async (req, res) => {
   try {

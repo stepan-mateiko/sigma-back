@@ -1,7 +1,7 @@
 {
-  "name": "backend",
+  "name": "Sigma Store backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend service for a simple e-commerce application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,6 +13,7 @@
   "dependencies": {
     "concurrently": "^8.2.1",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^4.18.2",
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.3",

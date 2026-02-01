@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
-const port = 5050;
 const cors = require("cors");
 const path = require("path");
-const { connectToDatabase } = require("./db");
-const productApi = require("./productApi");
-const orderApi = require("./orderApi");
+const { connectToDatabase } = require("./db/db");
+const productApi = require("./api/productApi");
+const orderApi = require("./api/orderApi");
+require("dotenv").config();
 
+const port = process.env.PORT || 5050;
 app.use(cors());
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
